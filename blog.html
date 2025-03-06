@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">        
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>        
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"> </script>        
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"> </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+
+       *
+        {
+          font-family: sans-serif;
+        }
+
+      @font-face
+        {
+            src: url('ChocoChips.ttf');
+            font-family: "ChocoChips";
+        }
+
+     .socialicons , .mobilephone
+     {
+       display: flex;justify-content: center;align-items: center;
+     }
+     .socialicons i:hover
+     {
+      color: rgb(255, 74, 82);;
+     }
+     .searchbar
+     {
+       height: 88px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       color: white;
+       background: rgb(255, 74, 82);
+    }
+     .top-slider
+      {
+         
+         background: url('img/cafewoman.jpg');
+         background-size: 100% 100%;
+         height: 500px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+      }  
+     .aboutUs
+     {
+        font-size: 100px;
+        font-family: ChocoChips;
+     }
+     .aboutUsPara
+     {
+        font-size: 20px;
+     }
+     
+    
+    .usercomments
+    {
+      padding: 18px 0 0 0;
+      color: rgb(102, 102, 102);
+    }
+    .boxshadoweffect
+    {
+      box-shadow: 0  5px 10px rgba(100,100,100,0.1);
+      position: relative;
+    }
+    
+     .boxshadoweffect .january
+     {
+      position: absolute;
+      left: 55px;
+      top: -65px;
+      color: white;
+      border-radius: 7px; 
+      background: rgb(255, 74, 82);
+      border: 0;
+      padding: 12px 28px;
+      cursor: pointer;
+      font-family: cooper std;
+     }
+     .january:hover
+    {
+      background-color: cyan;
+    }
+
+     .boxshadoweffect .january .fifteen
+    {
+      font-weight: bolder;
+      font-size: 30px;    
+    }
+
+    .searchbutton
+    {
+      background: rgb(255, 74, 82);
+      color: white; 
+      border: 0;
+      padding: 12px 35px;
+      font-weight: bolder;
+      cursor: pointer;
+      width: 100%;
+      margin: 10px 0;
+    }
+    .searchbutton:hover
+    {
+      background-color: rgb(30, 197, 181);
+    }
+    .main-btn-search
+    {
+      padding: 25px;
+    }
+    .main-search
+    {
+      border: 1px solid rgb(240, 233, 255);
+      display: flex;
+    }
+    .searchicon1
+    {
+      background: transparent;
+      border: 0;
+      margin: 10px;
+      outline: 0;
+      color: rgb(153, 181, 215);
+      flex: 90%;
+    }
+    .searchicon2
+    {
+      background: transparent;
+      border: 0;
+      margin: 15px 0 0 0;
+      outline: 0;
+      color: rgb(153, 181, 215);
+      flex: 10%;
+    }
+    .category
+    {
+      color: rgb(122, 151, 180);
+      background-color: rgb(251, 249, 255); padding:40px 20px;
+    }
+    .category table tr td
+    {
+      border-bottom: 1px solid rgb(240, 233, 255);
+      padding: 15px 0;
+    }
+    .quoteheading
+    {
+      padding: 0 0 0 15px;
+      font-weight: bold;
+    }
+    .dateheading
+    {
+      color: grey;
+      font-size: 14px;
+      padding: 0 0 0 15px;
+    }
+    .tag-clouds button
+    {
+      background-color: white;
+      color: rgb(102, 102, 102);   
+      border: none;
+    }
+    .subscribebtn
+    {
+      background: rgb(255, 74, 82);
+      color: white; 
+      border: 0;
+      padding: 12px 35px;
+      font-weight: bolder;
+      cursor: pointer;
+      width: 100%;
+      margin: 10px 0;
+    }
+    .subscribebtn:hover
+    {
+      background-color: rgb(30, 197, 181);
+    }
+    .enteremail
+    {
+      background: transparent;
+      outline: none;
+      border: 1px solid rgb(240, 233, 255);
+      width: 100%;
+      padding: 10px;
+    }
+.pagination 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0 0 0;
+}
+
+.pagination a 
+{
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+.pagination a.active 
+{
+  background-color: rgb(255, 74, 82);
+  color: white;
+}
+
+.pagination a:hover:not(.active) 
+{
+  background-color: #ddd;
+}
+
+
+     .footercountry
+    {
+      padding: 40px 0 0 5px;
+      color: rgb(170, 177, 183);
+      list-style:none;
+      font-size: 15px;
+    }
+    .footercountry li
+    {
+      padding: 6px 0;
+    }
+
+   @media(max-width: 700px)
+    {
+      .mobilephone
+      {
+        display: none;
+      }
+      .socialicons
+      {
+        display: none;
+      }
+      .searchbar
+      {
+        display: none;
+      }
+      .footerimages
+      {
+        margin: 50px;
+      }
+    
+    }
+       
+  </style>
+</head>
+<body>
+
+  
+<!-- Main Menu start -->
+
+ <div class="container-fluid  sticky-top" style="background:white"> 
+
+        <div class="row">
+
+          <div class="col-md-8">
+            <nav class="navbar navbar-expand-sm">
+  
+  <a class="navbar-brand" href="#"><img src="img/compass.webp"></a>
+
+        <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mymenu">
+              <span class="fa fa-bars text-dark"></span>
+        </button>
+            
+<div class="navbar-collapse collapse" id="mymenu">
+  <ul class="navbar-nav">
+
+    <li class="nav-item">
+      <a class="nav-link text-dark p-4" href="home.html">Home</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link text-dark p-4" href="website.html">About</a>
+    </li>
+
+    
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-dark p-4" href="#" id="navbardrop" data-toggle="dropdown">
+        Destination
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="destination.html">Destination Details</a>
+      </div>
+    </li>
+
+     <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-dark p-4" href="#" id="navbardrop" data-toggle="dropdown">
+        Blog
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="blog.html">Blog</a>
+        <a class="dropdown-item" href="singleblog.html">Single-Blog</a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link text-dark p-4" href="contact.html">Contact</a>
+    </li>
+
+  </ul>
+</div>
+</nav>
+
+</div>
+
+                 <!-- ICONS start -->
+
+                 <div class="icons col-md-4" >
+
+                     <div class="row" >
+
+                         <div class="col-md-5 mobilephone"> 
+                               <i class="fa fa-phone"> 10(256)-928 256</i> 
+                         </div>
+
+                         <div class="col-md-5 socialicons"> 
+                               <i class="fa fa-instagram p-3" style="border-left: 1px solid grey"></i> 
+                               <i class="fa fa-linkedin p-3"></i> 
+                               <i class="fa fa-facebook p-3"></i> 
+                               <i class="fa fa-google-plus p-3"></i> 
+                         </div>
+
+                         <div class="col-md-2 searchbar">
+                                <i class="fa fa-search searchbox"></i> 
+                         </div>
+
+                     </div>
+                 </div>
+
+
+        </div>
+    
+    </div>
+
+    <!-- Main Menu end -->
+
+
+
+    <!-- IMAGE start -->
+
+    <div class="top-slider">
+      <h1 class="text-light aboutUs">Blog</h1>
+      <p class="text-light aboutUsPara">Pixel Perfect Design With Awesome Contents</p>
+    </div>
+
+    <!-- IMAGE end -->
+
+    <!-- Blog start -->
+
+
+
+
+
+
+
+    <!-- Container start -->
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-8"> 
+           <div class="row">
+        <!-- Left Side of the column start -->
+        <div class="col-md-12 pt-5 mt-5">
+          <img src="img/twohumans.png" style="width: 100%">
+        <div class="boxshadoweffect">
+          
+          <div class="january"><h2 class="fifteen">15</h2>Jan</div>
+
+
+          <h5 class="pt-5 font-weight-bold">Google inks pact for new 35-storey office</h5>
+          <h6 style="color: rgb(122, 131, 169); padding: 10px 0 0 0;">That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.</h6>
+          <label class="usercomments"><i class="fa fa-user"></i> Travel Lifestyle | </label>
+          <label class="usercomments"><i class="fa fa-comments"></i> 5 Comments</label>
+        </div>
+        </div>
+
+        <div class="col-md-12 pt-5 mt-5">
+          <img src="img/samsung.png" style="width: 100%">
+        <div class="boxshadoweffect">
+          <div class="january"><h2 class="fifteen">15</h2>Jan</div>
+          <h5 class="pt-5 font-weight-bold">Google inks pact for new 35-storey office</h5>
+          <h6 style="color: rgb(122, 131, 169); padding: 10px 0 0 0;">That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.</h6>
+          <label class="usercomments"><i class="fa fa-user"></i> Travel Lifestyle | </label>
+          <label class="usercomments"><i class="fa fa-comments"></i> 5 Comments</label>
+        </div>
+        </div>
+
+        <div class="col-md-12 pt-5 mt-5">
+          <img src="img/heels.png" style="width: 100%">
+        <div class="boxshadoweffect">
+          <div class="january"><h2 class="fifteen">15</h2>Jan</div>
+          <h5 class="pt-5 font-weight-bold">Google inks pact for new 35-storey office</h5>
+          <h6 style="color: rgb(122, 131, 169); padding: 10px 0 0 0;">That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.</h6>
+          <label class="usercomments"><i class="fa fa-user"></i> Travel Lifestyle | </label>
+          <label class="usercomments"><i class="fa fa-comments"></i> 5 Comments</label>
+        </div>
+        </div>
+
+        <div class="col-md-12 pt-5 mt-5">
+          <img src="img/mug.png" style="width: 100%">
+        <div class="boxshadoweffect">
+          <div class="january"><h2 class="fifteen">15</h2>Jan</div>
+          <h5 class="pt-5 font-weight-bold">Google inks pact for new 35-storey office</h5>
+          <h6 style="color: rgb(122, 131, 169); padding: 10px 0 0 0;">That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.</h6>
+          <label class="usercomments"><i class="fa fa-user"></i> Travel Lifestyle | </label>
+          <label class="usercomments"><i class="fa fa-comments"></i> 5 Comments</label>
+        </div>
+        </div>
+
+        <div class="col-md-12 pt-5 mt-5">
+          <img src="img/cake.png" style="width: 100%">
+        <div class="boxshadoweffect">
+          <div class="january"><h2 class="fifteen">15</h2>Jan</div>
+          <h5 class="pt-5 font-weight-bold">Google inks pact for new 35-storey office</h5>
+          <h6 style="color: rgb(122, 131, 169); padding: 10px 0 0 0;">That dominion stars lights dominion divide years for fourth have don't stars is that he earth it first without heaven in place seed it second morning saying.</h6>
+          <label class="usercomments"><i class="fa fa-user"></i> Travel Lifestyle | </label>
+          <label class="usercomments"><i class="fa fa-comments"></i> 5 Comments</label>
+        </div>
+        </div>
+
+</div>
+</div>
+
+
+
+        <!-- Right Side of the column start -->
+        <div class="col-md-4 mt-5 pt-5">
+          
+         
+         <div class="main-btn-search">
+          <div class="main-search">
+            <input type="text" placeholder="Search Keyword" class="searchicon1"> 
+            <i class="fa fa-search searchicon2"></i>
+          </div>
+          <button type="button" class="searchbutton">SEARCH</button>
+        </div>
+
+
+        <!-- Category start -->
+        <div  class="category">
+          <h5 style="color: #000000;border-bottom: 1px solid rgb(240, 233, 255); font-weight: bold; padding: 0 0 15px 0;"> Category</h5>
+           
+              <table cellpadding="0" cellspacing="0" width="100%" >
+                <tr>
+                  <td>Resaurant food(37)</td>
+                </tr>
+                <tr>
+                  <td>Travel news(10)</td>
+                </tr>
+                <tr>
+                  <td>Modern technology(03)</td>
+                </tr>
+                <tr>
+                  <td>Product(11)</td>
+                </tr>
+                <tr>
+                  <td>Inspiration(21)</td>
+                </tr>
+                <tr>
+                  <td class="border-0">Health Care(09)</td>
+                </tr>
+              </table>
+            </div>
+    
+        <!-- Category end -->
+
+
+        <br/>
+
+
+<!-- Recent post start -->
+<div style="background-color: rgb(251, 249, 255); padding: 50px 0 60px 15px;">
+  <h5 style="border-bottom: 1px solid rgb(240, 233, 255); font-weight: bold; padding: 0 0 15px 0;">Recent Post</h5>
+  <div style="padding: 30px 0 0 0;">
+ <table cellpadding="8">
+  <tr>
+    <td><img src="img/r1.webp"></td>
+    <td><h6 class="quoteheading">From life was you fish...</h6><h6 class="dateheading">January 12, 2019</h6></td>
+  </tr>
+  <tr>
+    <td><img src="img/r2.webp"></td>
+    <td><h6 class="quoteheading">The Amazing Hubble</h6><h6 class="dateheading">02 Hours ago</h6></td>
+  </tr>
+   <tr>
+    <td><img src="img/r3.webp"></td>
+    <td><h6 class="quoteheading">Astronomy Or Astrology</h6><h6 class="dateheading">03 Hours ago</h6></td>
+  </tr>
+   <tr>
+    <td><img src="img/r4.webp"></td>
+    <td><h6 class="quoteheading">Asteroids telescope</h6><h6 class="dateheading">01 Hours ago</h6></td>
+  </tr>
+ </table>
+</div>
+</div>
+<!-- Recent post end -->
+
+<br/>
+
+<!-- Tag Clouds start -->
+<div style="background-color: rgb(251, 249, 255); padding: 50px 0 50px 15px;">
+  <h5 style="border-bottom: 1px solid rgb(240, 233, 255); font-weight: bold; padding: 0 0 15px 0;">Tag Clouds</h5>
+  <div style="padding: 30px 0 0 0;" class="tag-clouds">
+    <button type="button">project</button>
+    <button type="button">love</button>
+    <button type="button">technology</button>
+    <button type="button">travel</button>
+    <button type="button">restaurant</button>
+    <button type="button">life style</button>
+    <button type="button">design</button>
+    <button type="button">illustration</button>
+  </div>
+</div>
+    <!-- Tag Clouds end -->
+
+    <br/>
+
+    <!-- Instagram Feed start -->
+<div style="background-color: rgb(251, 249, 255); padding: 50px 0 65px 15px;">
+  <h5 style="border-bottom: 1px solid rgb(240, 233, 255); font-weight: bold; padding: 0 0 15px 0;">Instagram Feeds</h5>
+   <div style="padding: 30px 0 0 0;">
+    <img src="img/i1.webp" class="p-1">
+    <img src="img/i2.webp" class="p-1">
+    <img src="img/i3.webp" class="p-1">
+    <img src="img/i4.webp" class="p-1">
+    <img src="img/i5.webp" class="p-1">
+    <img src="img/i6.webp" class="p-1">
+   </div>
+</div>
+    <!-- Instagram Feed end -->
+
+    <br/>
+
+    <!-- Newsletter start -->
+
+<div style="background-color: rgb(251, 249, 255); padding: 50px 30px 50px 15px;">
+  <h5 style="border-bottom: 1px solid rgb(240, 233, 255); font-weight: bold; padding: 0 0 15px 0;">Newsletter</h5>
+     <div style="padding: 40px 0 0 0;">
+       <input type="text" class="enteremail" placeholder="Enter email">
+     </div>
+    <button type="button" class="subscribebtn">SUBSCRIBE</button>
+</div>
+    <!-- Newsletter end -->
+
+                  
+        </div>
+        <!-- Right Side of the column end -->
+
+
+
+      </div>
+
+      <!-- Pagination center start -->
+
+ <div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a href="#" class="active">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
+    <!-- Pagination end -->
+
+    </div>
+    <!-- Container end -->
+
+
+
+    <!-- Footer Container Start-->
+
+    <div style="padding: 80px 0 0 0;">
+
+  <div class="p-5 mt-5" style="background: rgb(4, 14, 39);">
+
+    <div class="row">
+
+      <div class="col-md-4">
+        <img class="d-flex justify-content-start pt-5" src="img/footer.webp">
+        <div class="footercountry">
+                 5th flora, 700/D kings road, 
+            <br/>Green lane New York-1782
+            <br/>+10 367 826 2567
+            <br/>contact@carpenter.com
+        </div>
+
+        <div class="footercountry">
+         <i class="fa fa-facebook p-2"></i>
+         <i class="fa fa-twitter p-2"></i>
+         <i class="fa fa-instagram p-2"></i>
+         <i class="fa fa-pinterest p-2"></i>
+         <i class="fa fa-youtube-play p-2"></i>
+         </div>
+      </div>
+        <!-- End -->
+
+      <div class="col-md-2">
+            <h4 class="text-light pt-5">Company</h4>
+            <ul  class="footercountry">
+                <li>Pricing</li>
+                <li>About</li>
+                <li>Gallery</li>
+                <li>Contact</li>
+            </ul>
+    </div>
+    <!--end-->
+
+  <div class="col-md-3">
+              <h4 class="text-light pt-5">Popular destinations</h4>
+              <div class="row">
+        <div class="col-md-6">
+            <ul class="footercountry">
+                <li>Rome</li>
+                <li>Italy</li>
+                <li>India</li>
+                <li>French</li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+             <ul  class="footercountry">
+                <li>America</li>
+                <li>Switzerland</li>
+                <li>Japan</li>
+                <li>Singapore</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--end -->
+
+
+      <div class="col-md-3">
+        <h4 class="text-light pt-5">Instagram</h4>
+        <div class="mt-5 footerimages">
+        <img src="img/a.webp" class="p-1" style="border-radius: 15px">
+        <img src="img/b.webp" class="p-1" style="border-radius: 15px">
+        <img src="img/c.webp" class="p-1" style="border-radius: 15px">
+        <img src="img/d.webp" class="p-1" style="border-radius: 15px">
+        <img src="img/e.webp" class="p-1" style="border-radius: 15px">
+        <img src="img/f.webp" class="p-1" style="border-radius: 15px">
+    </div>
+
+    <!--end-->
+
+      </div>
+
+  </div>
+<!--end row-->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+
+     <div class="text-center pt-4 mt-5" style="border-top: 1px solid white">
+         <span style="color: rgb(122, 129, 136);">Copyright ©2021 All rights reserved | This template is made with <i class="fa fa-heart-o text-danger"></i> by <i class="text-danger">Abhiyanshu Rawat</i></span>
+    </div>
+
+  </div> 
+</div>

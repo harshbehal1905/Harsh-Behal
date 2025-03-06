@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BANJARE</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">        
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>        
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"> </script>        
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"> </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+
+       *
+        {
+          font-family: sans-serif;
+        }
+
+      @font-face
+        {
+            src: url('ChocoChips.ttf');
+            font-family: "ChocoChips";
+        }
+
+     .socialicons , .mobilephone
+     {
+       display: flex;justify-content: center;align-items: center;
+     }
+     .socialicons i:hover
+     {
+      color: rgb(255, 74, 82);;
+     }
+     .searchbar
+     {
+       height: 88px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       color: white;
+       background: rgb(255, 74, 82);
+    }
+      .top-slider
+      {
+         
+         background: url('img/kid.jpg');
+         background-size: 100% 600px;
+         height: 600px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }  
+     .aboutUs
+     {
+        font-size: 100px;
+        font-family: ChocoChips;
+     }
+     .aboutUsPara
+     {
+        font-size: 20px;
+     }
+     .footercountry
+    {
+      padding: 40px 0 0 5px;
+      color: rgb(170, 177, 183);
+      list-style:none;
+      font-size: 15px;
+    }
+    .footercountry li
+    {
+      padding: 6px 0;
+    }
+
+    @media(max-width: 700px)
+    {
+      .mobilephone
+      {
+        display: none;
+      }
+      .socialicons
+      {
+        display: none;
+      }
+      .searchbar
+      {
+        display: none;
+      }
+      .footerimages
+      {
+        margin: 50px;
+      }
+    
+    }
+
+
+       
+  </style>
+</head>
+<body>
+
+
+ <!-- Main Menu start -->
+
+ <div class="container-fluid  sticky-top" style="background:white"> 
+
+        <div class="row" >
+          <div class="col-md-8">
+            <nav class="navbar navbar-expand-sm">
+  
+  <a class="navbar-brand" href="#"><img src="img/compass.webp"></a>
+
+        <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mymenu">
+              <span class="fa fa-bars text-dark"></span>
+        </button>
+            
+<div class="navbar-collapse collapse" id="mymenu">
+  <ul class="navbar-nav">
+
+    <li class="nav-item">
+      <a class="nav-link text-dark p-4" href="home.html">Home</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link text-dark p-4" href="website.html">About</a>
+    </li>
+
+    
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-dark p-4" href="#" id="navbardrop" data-toggle="dropdown">
+        Destination
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="destination.html">Destination Details</a>
+      </div>
+    </li>
+
+     <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-dark p-4" href="#" id="navbardrop" data-toggle="dropdown">
+        Blog
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="blog.html">Blog</a>
+        <a class="dropdown-item" href="singleblog.html">Single-Blog</a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link text-dark p-4" href="contact.html">Contact</a>
+    </li>
+
+  </ul>
+</div>
+</nav>
+
+</div>
+
+                 <!-- ICONS start -->
+
+                 <div class="icons col-md-4" >
+
+                     <div class="row" >
+
+                         <div class="col-md-5 mobilephone"> 
+                               <i class="fa fa-phone"> 10(256)-928 256</i> 
+                         </div>
+
+                         <div class="col-md-5 socialicons"> 
+                               <i class="fa fa-instagram p-3" style="border-left: 1px solid grey"></i> 
+                               <i class="fa fa-linkedin p-3"></i> 
+                               <i class="fa fa-facebook p-3"></i> 
+                               <i class="fa fa-google-plus p-3"></i> 
+                         </div>
+
+                         <div class="col-md-2 searchbar">
+                                <i class="fa fa-search searchbox"></i> 
+                         </div>
+
+                     </div>
+                 </div>
+
+
+        </div>
+    
+    </div>
+
+    <!-- Main Menu end -->
+
+
+
+    <!-- IMAGE start -->
+
+    <div class="top-slider">
+      <h1 class="text-light aboutUs">About Us</h1>
+      <p class="text-light aboutUsPara">Pixel Perfect Design With Awesome Contents</p>
+    </div>
+
+    <!-- IMAGE end -->
+
+
+    <!-- Our Story start -->
+
+        <div class="container pt-5">
+             <h1 class="text-dark">Our Story</h1>
+             <div class="row">
+                <div class="col-md-1"> </div>
+
+                <div class="col-md-8">  
+                  <p class="text-dark pt-5 lead">Consulting represents success at realizing the company is going in the wrong direction. The only time the company fails is when it is not possible to do a turnaround anymore. We help companies pivot into more profitable directions where they can expand and grow. It is inevitable that companies will end up making a few mistakes; we help them correct these mistakes. <br/><br/>
+
+                  Consulting represents success at realizing the company is going in the wrong direction. The only time the company fails is when it is not possible to do a turnaround anymore. We help companies pivot into more profitable directions where they can expand and grow. It is inevitable that companies will end up making a few mistakes; we help them correct these mistakes.</p>
+                </div>
+
+                <div class="col-md-3">  </div>
+             </div>
+        </div>
+
+        <!-- Our Story end-->
+
+
+        <!-- image start -->
+
+    <div class="carousel-inner">
+
+            <div class="carousel-item active d-flex justify-content-around p-5 ">
+                <img src="img/nigga.png">
+                <img src="img/baali.png">
+            </div>
+    </div>
+
+        <!-- Image end -->
+
+
+        <!-- Numbering start -->
+
+    <div class="container text-center mt-5 mb-5 pb-5">
+
+    <div class="row">
+
+      <div class="col-sm-4 p-3"><h1 class="text-danger display-4 font-weight-bold">378</h1><span>Tour has done successfully</span></div>
+
+      <div class="col-sm-4 p-3"><h1 class="text-danger display-4 font-weight-bold">30</h1><span>Yearly tour arrange</span></div>
+
+      <div class="col-sm-4 p-3"><h1 class="text-danger display-4 font-weight-bold">2278</h1><span>Happy Clients</span></div>
+
+    </div>
+    </div>
+
+       <!-- Numbering end -->
+
+
+
+       <!-- video container start -->
+          <div>
+            <iframe width="100%" height="480px" border-style= "none" src="https://www.youtube.com/embed/1lnxzA5ylJY">
+            </iframe>
+          </div>
+       <!-- video container end -->
+
+
+            <!-- Container Start -->
+
+    <div class="container d-flex justify-content-around text-center pt-5 mt-5">
+
+    <div class="row">
+
+      <div class="col-md-4 pr-3 pl-3 pt-1 pd-1"><img class="p-4" src="img/hotel.svg"><h4 class="text-dark">Luxuries Hotel
+        </h4><span>A wonderful serenity has taken to the possession of my entire soul.</span>
+      </div>
+
+      <div class="col-md-4 pr-3 pl-3 pt-1 pd-1"><img class="p-4" src="img/train.svg"><h4 class="text-dark">Comfortable Journey</h4>
+        <span>A wonderful serenity has taken to the possession of my entire soul.</span>
+      </div>
+
+      <div class="col-md-4 pr-3 pl-3 pt-1 pd-1"><img class="p-4" src="img/travel.svg"><h4 class="text-dark">Travel Guide
+        </h4><span>A wonderful serenity has taken to the possession of my entire soul.</span>
+      </div>
+
+  </div>
+  </div> 
+
+       <!-- Container End -->
+
+
+
+       <!-- Slider Start -->
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active bg-danger"></li>
+            <li data-target="#demo" data-slide-to="1" class="bg-danger"></li>
+            <li data-target="#demo" data-slide-to="2" class="bg-danger"></li>
+        </ul>
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                 <img src="img/white.png">
+                <div class="carousel-caption">
+                    <img src="img/girlquote.webp" >
+                    <p class="text-dark m-4 font-weight-bold">“To see the world, things dangerous to come to. To see behind the walls, draw closer. To find each other. And to feel. That is the purpose of life.”</p> 
+                    <h6 style="color: rgb(170, 162, 132);">– The Secret Life of Walter Mitty</h6>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+               <img src="img/white.png">
+                <div class="carousel-caption">
+                     <img src="img/girlquote.webp">
+                    <p class="text-dark m-4 font-weight-bold">“If we travel simply to indulge ourselves we are missing some of the greatest lessons life has to offer.”</p>  
+                    <h6 style="color: rgb(170, 162, 132);">– Unknown</h6> 
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/white.png">
+                <div class="carousel-caption">
+                     <img src="img/girlquote.webp">
+                    <p class="text-dark m-4 font-weight-bold font-italic">“We live in a wonderful world that is full of beauty, charm and adventure. There is no end to the adventures we can have if only we seek them with our eyes open.”</p> 
+                    <h6 style="color: rgb(170, 162, 132);">– Jawaharlal Nehru</h6>  
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+       <!-- Slider End -->
+
+
+      <!-- Recent Trips Start -->
+
+    <div class="container p-5">
+
+        <h1 class="d-flex justify-content-around text-center p-5 m-4">Recent Trips</h1>
+
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="p-2"><img src="img/1.webp" style="width:100%; border-radius: 7px;">
+        <h6 style="color:rgb(170, 177, 151); padding: 15px 0 0 0;">Oct 12, 2019</h6>
+        <span class="lead text-dark font-weight-bold">Journeys are best measured in new friends</span>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-2"><img  src="img/2.webp" style="width:100%; border-radius: 7px;">
+        <h6 style="color:rgb(170, 177, 151); padding: 15px 0 0 0;">Oct 12, 2019</h6>
+        <span class="lead text-dark font-weight-bold">Journeys are best measured in new friends</span>
+    </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-2"><img  src="img/3.webp" style="width:100%; border-radius: 7px;">
+        <h6 style="color:rgb(170, 177, 151); padding: 15px 0 0 0;">Oct 12, 2019</h6>
+        <span class="lead text-dark font-weight-bold">Journeys are best measured in new friends</span>
+    </div>
+      </div>
+
+  </div>
+  </div> 
+
+       <!-- Recent Trips End -->
+
+
+
+           <!-- Footer Container Start-->
+
+  <div class="p-5 mt-5" style="background: rgb(4, 14, 39);">
+
+    <div class="row">
+
+      <div class="col-md-4">
+        <img class="d-flex justify-content-start pt-5" src="img/footer.webp">
+        <div class="footercountry">
+                 5th flora, 700/D kings road, 
+            <br/>Green lane New York-1782
+            <br/>+10 367 826 2567
+            <br/>contact@carpenter.com
+        </div>
+
+        <div class="footercountry">
+         <i class="fa fa-facebook p-2"></i>
+         <i class="fa fa-twitter p-2"></i>
+         <i class="fa fa-instagram p-2"></i>
+         <i class="fa fa-pinterest p-2"></i>
+         <i class="fa fa-youtube-play p-2"></i>
+         </div>
+      </div>
+        <!-- End -->
+
+      <div class="col-md-2">
+            <h4 class="text-light pt-5">Company</h4>
+            <ul  class="footercountry">
+                <li>Pricing</li>
+                <li>About</li>
+                <li>Gallery</li>
+                <li>Contact</li>
+            </ul>
+    </div>
+    <!--end-->
+
+  <div class="col-md-3">
+              <h4 class="text-light pt-5">Popular destinations</h4>
+              <div class="row">
+        <div class="col-md-6">
+            <ul class="footercountry">
+                <li>Rome</li>
+                <li>Italy</li>
+                <li>India</li>
+                <li>French</li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+             <ul  class="footercountry">
+                <li>America</li>
+                <li>Switzerland</li>
+                <li>Japan</li>
+                <li>Singapore</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--end -->
+
+
+      <div class="col-md-3">
+        <h4 class="text-light pt-5">Instagram</h4>
+        <div class="mt-5 footerimages">
+        <img src="img/a.webp" class="p-1" style="border-radius: 15px">
+        <img src="img/b.webp" class="p-1" style="border-radius: 15px">
+        <img src="img/c.webp" class="p-1" style="border-radius: 15px">
+        <img src="img/d.webp" class="p-1" style="border-radius: 15px">
+        <img src="img/e.webp" class="p-1" style="border-radius: 15px">
+        <img src="img/f.webp" class="p-1" style="border-radius: 15px">
+    </div>
+
+    <!--end-->
+
+      </div>
+
+  </div>
+<!--end row-->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+
+    <div class="text-center pt-4 mt-5" style="border-top: 1px solid white">
+         <span style="color: rgb(122, 129, 136);">Copyright ©2021 All rights reserved | This template is made with <i class="fa fa-heart-o text-danger"></i> by <i class="text-danger">Abhiyanshu Rawat</i></span>
+    </div>
+
+  </div>
+
+    <!-- footer container end -->
+
+</body>
+</html>

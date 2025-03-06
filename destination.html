@@ -1,0 +1,788 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Destination</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">        
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>        
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"> </script>        
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"> </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- jquery plugins for slider range -->
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <style type="text/css">
+
+      @font-face
+        {
+            src: url('ChocoChips.ttf');
+            font-family: "ChocoChips";
+        }
+
+        *
+        {
+          font-family: sans-serif;
+        }
+
+     .socialicons , .mobilephone
+     {
+       display: flex;justify-content: center;align-items: center;
+     }
+     .socialicons i:hover
+     {
+      color: rgb(255, 74, 82);;
+     }
+     .searchbar
+     {
+       height: 88px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       color: white;
+       background: rgb(255, 74, 82);
+    }
+    .carousel-caption
+    {
+       top: 0;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       text-align: center;
+    }
+     .country
+     {
+        font-size: 100px;
+        font-family: ChocoChips;
+     }
+     .countryname
+     {
+        font-size: 20px;
+        padding: 5px 0 40px 0;
+
+     }
+     .explorenow
+     {
+      border-radius: 5px; 
+      background: rgb(255, 74, 82);
+      color: white; 
+      border: 0;
+      padding: 15px 25px;
+      transition: transform .2s;
+      font-family: sans-serif;
+      
+     }
+     .explorenow:hover
+     {
+      background: cyan;
+      transform: scale(1.1);
+     }
+     .searchh
+     {
+      border-radius: 5px; 
+      background: rgb(255, 74, 82);
+      color: white; 
+      border: 0;
+      padding: 10px 35px;
+      font-weight: bold;
+     }
+     .countryimage
+     {
+      width: 100%;
+     }
+     
+     .bottom-left 
+     {
+      position: absolute;
+      bottom: 50px;
+      color: white;
+      left: 50px;
+     }
+     .subscribebutton
+     {
+      border-radius: 7px; 
+      background: rgb(255, 74, 82);
+      color: white; 
+      border: 0;
+      padding: 12px 35px;
+      margin: 22px 0 0 0;
+      font-weight: bolder;
+     }
+     .subscribebutton:hover
+     {
+      background: cyan;
+     }
+     .email
+     {
+      width: 100%;
+      border: 1px solid rgb(170, 162, 132); 
+      border-radius: 7px;
+      padding: 12px 10px;
+      outline: none;
+      margin: 20px 0 0 0;
+     }
+     .top-left
+     {
+      position: absolute;
+      left: 35px;
+      bottom: 150px;
+      color: white;
+      border-radius: 100px; 
+      background: rgb(255, 74, 82);
+      border: 0;
+      padding: 4px 18px;
+      cursor: pointer;
+     }
+     .top-left:hover
+    {
+      background-color: rgb(30, 197, 181);
+      transition: 0.1s 
+    }
+    .usacountry
+    {
+      color: rgb(255, 74, 82);
+      padding: 25px 0 0 0;
+    }
+    .usa
+    {
+      color: rgb(122, 131, 139);
+    }
+    .review
+    {
+      font-size: 13px;
+    }
+    .days5
+    {
+      position: absolute;
+      bottom: 1px;
+      right: 30px;
+      font-size: 13px;
+    }
+    .moreplaces
+    {
+      border-radius: 7px; 
+      background: rgb(255, 74, 82);
+      color: white; 
+      border: 0;
+      padding: 12px 35px;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+    .moreplaces:hover
+    {
+      background-color: rgb(30, 197, 181);
+    }
+    .footercountry
+    {
+      padding: 40px 0 0 5px;
+      color: rgb(170, 177, 183);
+      list-style:none;
+      font-size: 15px;
+    }
+    .footercountry li
+    {
+      padding: 6px 0;
+    }
+     .filterresultbox
+    {
+      border: 1px solid rgb(222, 226, 231);
+      padding: 20px 20px 30px 20px;
+      border-radius: 7px;
+    }
+    .countryplaceholder
+    {
+      padding: 15px 70px 15px 0;
+      margin: 10px 0;  
+      width: 100%;
+      outline: none;
+      border: 1px solid rgb(222, 226, 231);
+      border-radius: 5px;
+    }
+    .countryplaceholder option
+    {
+      padding: 15px 70px 15px 0;
+      margin: 10px 0;  
+      width: 100%;
+    }
+    .reset
+    {
+      border-radius: 7px; 
+      background: rgb(255, 74, 82);
+      color: white; 
+      border: 0;
+      padding: 0.8rem 8rem;
+      margin: 22px 0 0 0;
+      font-weight: bolder;
+      width: 100%;
+    }
+
+
+
+    @media(max-width: 700px)
+    {
+      .mobilephone
+      {
+        display: none;
+      }
+      .socialicons
+      {
+        display: none;
+      }
+      .searchbar
+      {
+        display: none;
+      }
+      .footerimages
+      {
+        margin: 50px;
+      }
+      .explorenow
+      {
+        padding: 15px 30px;
+        font-size: 15px;
+      }
+      .country
+      {
+        font-size: 60px;
+      }
+      .countryname
+      {
+        font-size: 17px;
+      }
+      .indicators
+      {
+        display: none;
+      }
+
+    }
+
+       
+  </style>
+</head>
+<body>
+
+ <div class="container-fluid  sticky-top" style="background:white"> 
+
+        <div class="row" >
+          <div class="col-md-8">
+            <nav class="navbar navbar-expand-sm">
+  
+  <a class="navbar-brand" href="#"><img src="img/compass.webp"></a>
+
+        <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mymenu">
+              <span class="fa fa-bars text-dark"></span>
+        </button>
+            
+<div class="navbar-collapse collapse" id="mymenu">
+  <ul class="navbar-nav">
+
+    <li class="nav-item">
+      <a class="nav-link text-dark p-4" href="home.html">Home</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link text-dark p-4" href="website.html">About</a>
+    </li>
+
+    
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-dark p-4" href="#" id="navbardrop" data-toggle="dropdown">
+        Destination
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="destination.html">Destination Details</a>
+      </div>
+    </li>
+
+     <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-dark p-4" href="#" id="navbardrop" data-toggle="dropdown">
+        Blog
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="blog.html">Blog</a>
+        <a class="dropdown-item" href="singleblog.html">Single-Blog</a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link text-dark p-4" href="contact.html">Contact</a>
+    </li>
+
+  </ul>
+</div>
+</nav>
+
+</div>
+
+                 <!-- ICONS start -->
+
+                 <div class="icons col-md-4" >
+
+                     <div class="row" >
+
+                         <div class="col-md-5 mobilephone"> 
+                               <i class="fa fa-phone"> 10(256)-928 256</i> 
+                         </div>
+
+                         <div class="col-md-5 socialicons"> 
+                               <i class="fa fa-instagram p-3" style="border-left: 1px solid grey"></i> 
+                               <i class="fa fa-linkedin p-3"></i> 
+                               <i class="fa fa-facebook p-3"></i> 
+                               <i class="fa fa-google-plus p-3"></i> 
+                         </div>
+
+                         <div class="col-md-2 searchbar">
+                                <i class="fa fa-search searchbox"></i> 
+                         </div>
+
+                     </div>
+                 </div>
+
+
+        </div>
+    
+    </div>
+
+    <!-- Slider start -->
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- indicators -->
+    <ul class="carousel-indicators indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+
+    <!-- slideshow -->
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+           <img src="img/iceland.jpg" style="width: 100%">
+        <div class="carousel-caption">
+                <h1 class="text-light country">Iceland</h1>
+                <p class="text-light countryname">Pixel Perfect Design With Awesome Contents</p>
+                <div><input type="button" value="Explore Now" class="explorenow"/></div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+          <img src="img/japan.jpg" style="width: 100%">
+        <div class="carousel-caption">
+                <h1 class="text-light country">Japan</h1>
+                <p class="text-light countryname">Pixel Perfect Design With Awesome Contents</p>
+                <div><input type="button" value="Explore Now" class="explorenow"/></div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+          <img src="img/switzerland.jpg" style="width: 100%">
+        <div class="carousel-caption">
+                <h1 class="text-light country">Switzerland</h1>
+                <p class="text-light countryname">Pixel Perfect Design With Awesome Contents</p>
+               <div><input type="button" value="Explore Now" class="explorenow"/></div>
+        </div>
+      </div>
+
+    </div>
+
+      <!-- indicators -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+
+  </div>
+
+    <!-- Slider end -->
+
+
+    <!-- Where you want to go? start -->
+   <div class="container-fluid">
+    <div class="row" style="background: rgb(4, 14, 39);padding: 40px 0;">
+
+      <div class="col-md-4"> 
+        <h4 class="text-light ml-5">Where you want to go?</h4>
+      </div>
+
+      <div class="col-md-2"> 
+        <input type="text" placeholder="Where to go?" class="p-2" 
+        style="width: 100%;background: transparent; border: 1px solid rgb(170, 162, 132); border-radius: 5px;">
+      </div>
+
+      <div class="col-md-2">
+        <input type="date" class="p-2" 
+        style="width: 100%;color: white; background: transparent; border: 1px solid rgb(170, 162, 132); border-radius: 5px;">
+      </div>
+
+      <div class="col-md-2 form-group">
+        <div class="dropdown">
+           <input class="dropdown-toggle" data-toggle="dropdown" style="width: 100%;color: white; background: transparent; border: 1px solid rgb(170, 162, 132); border-radius: 5px;padding: 10px;">
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Link 1</a>
+    <a class="dropdown-item" href="#">Link 2</a>
+    <a class="dropdown-item" href="#">Link 3</a>
+  </div>
+</div>
+        
+      </div>
+
+      <div class="col-md-2">
+        <button type="button" class="searchh">Search</button>
+      </div>
+
+    </div>
+  </div>
+        <!-- Where you want to go? end -->
+
+        
+
+
+         
+        <!-- filter results start -->
+
+        <div class="container pt-5 mt-5">
+
+          <div class="row">
+            <div class="col-md-4">
+
+              <h5 class="pt-5">Filter Result</h5>
+              <div class="filterresultbox">
+                <select class="countryplaceholder">
+                   <option>Country</option>
+                   <option>Africa</option>
+                   <option>Canada</option>
+                   <option>USA</option>
+                </select>
+
+                <select class="countryplaceholder">
+                   <option>Travel type</option>
+                   <option>Budget</option>
+                   <option>Premium</option>
+                   <option>Luxury</option>
+                </select>
+
+        <!-- range start -->
+
+        <label for = "price">Price range:</label>
+
+      <script>
+         debugger;
+         $(function() {
+            $( "#slider-3" ).slider({
+               range:true,
+               min: 0,
+               max: 600,
+               values: [ 35, 200 ],
+               slide: function( event, ui ) {
+                  $( "#price" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+               }
+            });
+            $( "#price" ).val( "$" + $( "#slider-3" ).slider( "values", 0 ) +
+               " - $" + $( "#slider-3" ).slider( "values", 1 ) );
+         });
+      </script>  
+
+      <div id = "slider-3" style=""></div>
+
+      <p class="mt-3">
+         <input type = "text" id = "price" 
+         style = "border:0; color:rgb(126, 131, 139);">
+      </p>         
+
+      <!-- range end -->
+
+                <input type="button" value="Reset" class="reset">
+              </div>
+            </div>
+
+            <!-- filter results end -->
+
+
+            <!-- popular places start -->
+
+            <div class="col-md-8">
+              <div class="row">
+
+            <div class="col-md-6 pt-5">
+              <img src="img/california.webp" style="width: 100%; height: 200px; border-radius: 5px;">
+              <span class="top-left">$500</span>
+              <h4 class="usacountry">California</h4>
+              <h6 class="usa">United State of America</h6>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <span class="review">(57 Review)</span>
+               <div class="days5">
+                <i class="fa fa-clock-o"></i>
+                <span>&nbsp5 Days</span>
+               </div>
+            </div>
+
+            <div class="col-md-6 pt-5">
+              <img src="img/korola megna.webp" style="width: 100%; height: 200px; border-radius: 5px;">
+              <span class="top-left">$500</span>
+              <h4 class="usacountry">Korola Megna</h4>
+              <h6 class="usa">United State of America</h6>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <span class="review">(25 Review)</span>
+               <div class="days5">
+                <i class="fa fa-clock-o"></i>
+                <span>&nbsp5 Days</span>
+               </div>
+            </div>
+
+            <div class="col-md-6 pt-5">
+              <img src="img/london.webp" style="width: 100%; height: 200px; border-radius: 5px;">
+              <span class="top-left">$500</span>
+              <h4 class="usacountry">London</h4>
+              <h6 class="usa">United State of America</h6>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <span class="review">(86 Review)</span>
+               <div class="days5">
+                <i class="fa fa-clock-o"></i>
+                <span>&nbsp5 Days</span>
+               </div>
+            </div>
+
+            <div class="col-md-6 pt-5">
+              <img src="img/miami beach.webp" style="width: 100%; height: 200px; border-radius: 5px;">
+              <span class="top-left">$500</span>
+              <h4 class="usacountry">Miami Beach</h4>
+              <h6 class="usa">United State of America</h6>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <span class="review">(75 Review)</span>
+               <div class="days5">
+                <i class="fa fa-clock-o"></i>
+                <span>&nbsp5 Days</span>
+               </div>
+            </div>
+
+            <div class="col-md-6 pt-5">
+              <img src="img/california2.webp" style="width: 100%; height: 200px; border-radius: 5px;">
+              <span class="top-left">$500</span> 
+              <h4 class="usacountry">California</h4>
+              <h6 class="usa">United State of America</h6>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <span class="review">(30 Review)</span>
+               <div class="days5">
+                <i class="fa fa-clock-o"></i>
+                <span>&nbsp5 Days</span>
+               </div>             
+            </div>
+
+            <div class="col-md-6 pt-5">
+              <img src="img/saintmartine island.webp" style="width: 100%; height: 200px; border-radius: 5px;">
+              <span class="top-left">$500</span>
+              <h4 class="usacountry">Saintmartine Island</h4>
+              <h6 class="usa">United State of America</h6>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <i class="fa fa-star" style="color: yellow;"></i>
+              <span class="review">(50 Review)</span>
+               <div class="days5">
+                <i class="fa fa-clock-o"></i>
+                <span>&nbsp5 Days</span>
+               </div>
+            </div>
+              
+            </div>
+
+            <div style="text-align: center; padding: 80px 0;"><input type="button" class="moreplaces" value="More Places"></div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- popular places end -->
+
+
+
+
+      
+           <!-- Subscribe start -->
+
+<div style="padding: 50px 0 0 0;">
+<div style="background: url(img/parachute.png); background-size: 100% 100%;">
+  <div style="background:rgba(0, 0, 0, 0.6);padding: 70px 1%;color: white;">
+  <div class="container">
+
+          <div class="row" >
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+              <h4>Subscribe Our Newsletter</h4>
+              <span style="color: rgb(170, 177, 183);">Subscribe newsletter to get offers and about new places to discover.</span>
+            </div>
+
+            <div class="col-md-4">
+               <input type="text"  class="email" placeholder="Your mail">            
+            </div>
+
+            <div class="col-md-2">
+              <button type="button" class="subscribebutton col-md-12">Subscibe</button>
+            </div>
+              <div class="col-md-1"></div>
+          </div>
+          <!--end Row-->
+        </div>
+
+  </div>
+  </div>
+</div>
+         <!-- Subscribe end -->
+
+
+       <!-- Recent Trips Start -->
+
+    <div class="container p-5">
+
+        <h1 class="d-flex justify-content-around text-center p-5 m-4">Recent Trips</h1>
+
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="p-2"><img src="img/1.webp" style="width:100%; border-radius: 7px;">
+        <h6 style="color:rgb(170, 177, 151); padding: 15px 0 0 0;">Oct 12, 2019</h6>
+        <span class="lead text-dark font-weight-bold">Journeys are best measured in new friends</span>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-2"><img  src="img/2.webp" style="width:100%; border-radius: 7px;">
+        <h6 style="color:rgb(170, 177, 151); padding: 15px 0 0 0;">Oct 12, 2019</h6>
+        <span class="lead text-dark font-weight-bold">Journeys are best measured in new friends</span>
+    </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-2"><img  src="img/3.webp" style="width:100%; border-radius: 7px;">
+        <h6 style="color:rgb(170, 177, 151); padding: 15px 0 0 0;">Oct 12, 2019</h6>
+        <span class="lead text-dark font-weight-bold">Journeys are best measured in new friends</span>
+    </div>
+      </div>
+
+  </div>
+  </div> 
+
+       <!-- Recent Trips End -->
+
+
+       <!-- Footer Container Start-->
+
+  <div class="p-5 mt-5" style="background: rgb(4, 14, 39);">
+
+    <div class="row">
+
+      <div class="col-md-4">
+        <img class="d-flex justify-content-start pt-5" src="img/footer.webp">
+        <div class="footercountry">
+                 5th flora, 700/D kings road, 
+            <br/>Green lane New York-1782
+            <br/>+10 367 826 2567
+            <br/>contact@carpenter.com
+        </div>
+
+        <div class="footercountry">
+         <i class="fa fa-facebook p-2"></i>
+         <i class="fa fa-twitter p-2"></i>
+         <i class="fa fa-instagram p-2"></i>
+         <i class="fa fa-pinterest p-2"></i>
+         <i class="fa fa-youtube-play p-2"></i>
+         </div>
+      </div>
+        <!-- End -->
+
+      <div class="col-md-2">
+            <h4 class="text-light pt-5">Company</h4>
+            <ul  class="footercountry">
+                <li>Pricing</li>
+                <li>About</li>
+                <li>Gallery</li>
+                <li>Contact</li>
+            </ul>
+    </div>
+    <!--end-->
+
+  <div class="col-md-3">
+              <h4 class="text-light pt-5">Popular destinations</h4>
+              <div class="row">
+        <div class="col-md-6">
+            <ul class="footercountry">
+                <li>Rome</li>
+                <li>Italy</li>
+                <li>India</li>
+                <li>French</li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+             <ul  class="footercountry">
+                <li>America</li>
+                <li>Switzerland</li>
+                <li>Japan</li>
+                <li>Singapore</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--end -->
+
+
+      <div class="col-md-3">
+        <h4 class="text-light pt-5">Instagram</h4>
+        <div class="mt-5 footerimages">
+        <img src="img/a.webp" class="p-1" style="border-radius: 15px">
+        <img src="img/b.webp" class="p-1" style="border-radius: 15px">
+        <img src="img/c.webp" class="p-1" style="border-radius: 15px">
+        <img src="img/d.webp" class="p-1" style="border-radius: 15px">
+        <img src="img/e.webp" class="p-1" style="border-radius: 15px">
+        <img src="img/f.webp" class="p-1" style="border-radius: 15px">
+    </div>
+
+    <!--end-->
+
+      </div>
+
+  </div>
+<!--end row-->
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+
+    <div class="text-center pt-4 mt-5" style="border-top: 1px solid white">
+         <span style="color: rgb(122, 129, 136);">Copyright ©2021 All rights reserved | This template is made with <i class="fa fa-heart-o text-danger"></i> by <i class="text-danger">Abhiyanshu Rawat</i></span>
+    </div>
+
+  </div> 
+
+   <!-- Footer Container end -->
+
+        </body>
+        </html
